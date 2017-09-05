@@ -28,10 +28,11 @@
 (global-set-key (kbd "TAB") 'self-insert-command)
 
 ;;tab width
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
+;;(setq-default indent-tabs-mode nil)
+;;(setq-default tab-width 4)
+;;(setq indent-line-function 'insert-tab)
 
+(setq-default c-basic-offset 4)
 ;;enable shift tab
 (global-set-key (kbd "<backtab>") 'un-indent-by-removing-4-spaces)
 (defun un-indent-by-removing-4-spaces ()
@@ -82,3 +83,23 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;copy and paste from linux
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+
+;;clear shell
+(defun clear-shell ()
+  (interactive)
+  (let ((old-max comint-buffer-maximum-size))
+    (setq comint-buffer-maximum-size 0)
+    (comint-truncate-buffer)
+    (setq comint-buffer-maximum-size old-max)))
+;;binding
+(global-set-key "\C-f" 'clear-shell)
+
+;;hide password
+(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
+;;(require 'password-mode)
+;;(add-hook 'text-mode-hook 'password-mode)
