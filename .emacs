@@ -103,3 +103,6 @@
 (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
 ;;(require 'password-mode)
 ;;(add-hook 'text-mode-hook 'password-mode)
+
+;;keyboard shortcut for send invisible
+(global-set-key (kbd "C-x C-s") 'send-invisible)
