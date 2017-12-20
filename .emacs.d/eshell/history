@@ -1,0 +1,128 @@
+
+cd CSCI3411/fss_integration/
+git status
+cd project-os-f17-the-context-switchers/
+git status
+make clena
+make clean
+git status
+git checkout *
+git pull
+git pull
+git pull
+git checkout fssc.
+git checkout fss.c
+git checkout fss_lvl5.c
+git oull
+git pull
+make qemu
+make qemu
+make clean
+make qemu
+make clean
+maek qemu
+make qemu
+maek clean
+make qemu
+make clean
+maek qemu
+make qemu
+make
+make clean qemu
+make clean qemu
+make clean qemu
+make clean qemu
+make qemu
+make qemu
+make clean
+make qemu
+make clean qemu
+make clean qemu
+git add fss_lvl6.c
+make clean
+make qemu
+make qemu
+make qemu
+make clean qemu
+make clean qemu
+fss_lvl5
+make qemu
+make clean
+make qemu
+make clean
+make clean qemu
+make qemu
+make clean
+make qemu
+make clean qemu
+rm fss_lvl6.c
+make qemu
+make clean
+make qemu
+make clean
+make qemu
+maek clean
+make clean
+make qemu
+make clean qemu
+make clean
+make qemu
+make clean qemu
+make clean qemu
+make clean
+git add fss_lvl6.c
+git add fss.c
+git add param.h
+git add fss_lvl5.c
+git status
+make qemu
+make clean qemu
+make qemu
+make qemu
+make clean qemu
+make clean
+make qemu
+make clean qemu
+make clean
+make qemu
+make clean
+make clean qemu
+make clean
+make qemu
+make clean
+make qemu
+make clean
+make qemu
+make clean
+make clean qemu
+make clean
+make qemu
+make clean
+make qemu
+make qemu
+make qemu
+git add fss_lvl6
+git add fss_lvl6.c
+git add fss.c
+git push commit -m "added support for restoring directories that were unlinked"
+git commit -m "added support for restoring directories that were unlinked"
+git push 
+make clean
+make qemu
+make qemu
+make clean qemu
+make qemu
+make clean
+git status
+cd ~/Desktop/
+rpn
+./rpn 
+make
+make qemu
+cd ~/.emacs.d
+ls
+cm ~/.emacs .
+mv ~/.emacs .
+ls
+cd .emacs.d
+mv .emacs init.el
