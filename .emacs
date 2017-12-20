@@ -125,4 +125,12 @@
 (fset 'c-comment-block-style
    [?/ ?* ?\M-j ?\M-x ?e ?n ?d tab ?m ?a tab])
 
+;;keybind
 (global-set-key (kbd "C-x C-j") 'c-comment-block-style)
+
+
+;;smooth scrolling
+(setq scroll-step 1)
+
+;;move temp files somewhere else for the project
+(setq backup-directory-alist '(("."."~/.saves")))
