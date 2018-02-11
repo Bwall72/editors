@@ -141,7 +141,7 @@
 (setq show-paren-delay 0)
 
 ;;disable menu bar
-(menu-bar-mode 1)
+(menu-bar-mode 0)
 
 ;;disable the tool bar
 (tool-bar-mode 0)
