@@ -28,7 +28,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/brandonw/.emacs.d/" (23097 50833 10386 382000) "auto-save-list/" "eshell/" "ido.last~" "autopair/" "emacs-c-ide-demo/" "ido.last" "init.el" "./" "evil/" "url/" "elpa/" "../" "init.el~" "tramp" "ac-comphist.dat" "games/")
+ ("/home/brandonw/.emacs.d/" (23097 50881 69487 367000) "auto-save-list/" "eshell/" "ido.last~" "autopair/" "emacs-c-ide-demo/" "ido.last" "init.el" "./" "evil/" "url/" "elpa/" "../" "#init.el#" "init.el~" "tramp" "ac-comphist.dat" "games/")
 
  ("/home/" (22771 38521 693994 800000) "./" "../" "brandonw/")
 

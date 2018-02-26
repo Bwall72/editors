@@ -39,7 +39,7 @@
 
 
 ;;Default to 4 spaces for indents
-(setq-default c-basic-offset 4)
+(setq c-default-style "linux" c-basic-offset 4)
 
 ;; (setq-default c-basic-offset 4)
 ;;enable shift tab
@@ -155,6 +155,17 @@
 
 ;;chage yes/no prompts to y/n
 (fset 'yes-or-no-p 'y-or-n-p)
+
+
+;;C switch statement style
+(s-set-offset 'case-label '+)
+
+;;Write over selected text
+(delete-selection-mode 1)
+
+;;Display clock
+(display-time-mode 1)
+
 
 ;;MELPA
 (require 'package)
