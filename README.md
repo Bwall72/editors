@@ -6,6 +6,8 @@ sudo apt-get install git emacs
 cd ~/
 git clone https://github.com/Bwall72/editors.git
 mv editors/.emacs.d ~/
+cd ~/.emacs.d
+git clone https://github.com/joaotavora/autopair.git
 ```
 To check installation:
 ```bash
