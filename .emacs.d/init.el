@@ -158,7 +158,7 @@
 
 
 ;;C switch statement style
-(s-set-offset 'case-label '+)
+(c-set-offset 'case-label '+)
 
 ;;Write over selected text
 (delete-selection-mode 1)
