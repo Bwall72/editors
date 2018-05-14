@@ -1,0 +1,144 @@
+Brandon Waller Emacs Init 
+
+* General Emacs Settings
+** Title 
+   #+BEGIN_SRC emacs-lisp
+   (setq frame-title-format"Emacs")
+   #+END_SRC
+** Evil Mode
+Vim keybindings, and editor in emacs
+[[https://github.com/emacs-evil/evil][Repo]]
+[[https://www.emacswiki.org/emacs/Evil][Wiki]]
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+#+END_SRC
+
+#+RESULTS:
+: t
+
+** Theme 
+doom-peacock 
+[[https://github.com/hlissner/emacs-doom-themes][repo]]
+#+BEGIN_SRC emacs-lisp
+(require 'doom-themes)
+(load-theme 'doom-one t)
+
+(doom-themes-visual-bell-config)
+(doom-themes-org-config)
+#+END_SRC
+
+** Line Numbers
+   #+BEGIN_SRC emacs-lisp
+     (global-nlinum-mode t)
+   #+END_SRC
+** Interactively Do Things Mode
+   #+BEGIN_SRC emacs-lisp
+     (require 'ido)
+     (ido-mode t)
+   #+END_SRC
+** Package Repositories
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
+#+END_SRC
+
+** Electric Pair
+#+BEGIN_SRC emacs-lisp
+(electric-pair-mode 1)
+#+END_SRC
+   
+** Menu Settings
+#+BEGIN_SRC emacs-lisp
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+#+END_SRC
+** Highlight Matching Delimiters
+#+BEGIN_SRC emacs-lisp
+  (show-paren-mode)
+  (setq show-paren-delay 0)
+#+END_SRC
+** Tab Mode
+
+#+BEGIN_SRC emacs-lisp
+  ;; attempt to allow emacs tabs to be read in other applciations
+  ;; may or may not do anything
+  (setq indent-tabs-mode nil)
+#+END_SRC
+   
+** y/n Confirm
+#+BEGIN_SRC emacs-lisp
+  (fset 'yes-or-no-p 'y-or-n-p)
+#+END_SRC
+* Flycheck
+On-the-fly syntax checking extension for Emacs
+[[http://www.flycheck.org/en/latest/][Link]]
+#+BEGIN_SRC emacs-lisp
+  (global-flycheck-mode)
+  ;; disable elisp
+  (with-eval-after-load 'flycheck
+    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+#+END_SRC
+Additional Config Requirements
+SH:
+#+BEGIN_SRC sh
+sudo pip install virtualenv
+#+END_SRC
+Emacs:
+#+BEGIN_SRC 
+M-x jedi:install-server
+#+END_SRC
+* Language Specific Settings
+** C/C++ 
+*** 4 spaces for tab
+#+BEGIN_SRC emacs-lisp
+  (setq c-basic-offset 4)
+#+END_SRC 
+*** Linux Style
+#+BEGIN_SRC emacs-lisp
+  (setq c-default-style "linux")
+#+END_SRC
+    
+*** Long Name Setting
+#+BEGIN_SRC emacs-lisp
+  (defun indent-setting ()
+    (c-set-offset 'arglist-intro '+))
+  (add-hook 'java-mode-hook 'indent-setting)
+#+END_SRC
+** Python
+*** Jedi Auto Complete
+[[https://github.com/tkf/emacs-jedi][Repo]]
+#+BEGIN_SRC emacs-lisp
+  (use-package jedi
+    :ensure t
+    :init
+    (add-hook 'python-mode-hook 'jedi:setup)
+    (add-hook 'python-mode-hook 'jedi:ac-setup))
+#+END_SRC
+*** Jedi Documentation Binding C-.
+#+BEGIN_SRC emacs-lisp
+  (with-eval-after-load 'python
+    (define-key python-mode-map (kbd "C-.") 'jedi:show-doc))
+#+END_SRC
+* Org Mode
+** org-bullets mode
+Proper bullets in org mode
+#+BEGIN_SRC emacs-lisp
+  (require 'org-bullets)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+#+END_SRC
+
+
+
+
