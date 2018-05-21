@@ -15,9 +15,6 @@ Vim keybindings, and editor in emacs
 (evil-mode 1)
 #+END_SRC
 
-#+RESULTS:
-: t
-
 ** Theme 
 doom-peacock 
 [[https://github.com/hlissner/emacs-doom-themes][repo]]
@@ -81,6 +78,33 @@ doom-peacock
 #+BEGIN_SRC emacs-lisp
   (fset 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
+** Smooth Scrolling
+[[https://www.emacswiki.org/emacs/SmoothScrolling][link]]
+#+BEGIN_SRC emacs-lisp
+  (setq scroll-step 1)
+#+END_SRC
+** Mouse Wheel Setting
+Move the window under the mouse cursor
+[[https://www.emacswiki.org/emacs/SmoothScrolling][link]]
+#+BEGIN_SRC emacs-lisp
+(setq mouse-wheel-follow-mouse 't)
+#+END_SRC
+** Flyspell
+Spell checking 
+[[https://www.emacswiki.org/emacs/FlySpell][Wiki]]
+#+BEGIN_SRC emacs-lisp
+  (require 'flyspell)
+  (flyspell-mode +1)
+  ;;(add-hook 'text-mode-hook 'flyspell-popup-auto-correct-mode)
+  (add-hook 'text-mode-hook 'flyspell-mode)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+#+END_SRC
+Binding for popup
+[[https://github.com/xuchunyang/flyspell-popup][link]]
+#+BEGIN_SRC emacs-lisp
+(define-key flyspell-mode-map (kbd "C-,") #'flyspell-popup-correct)
+(add-hook 'flyspell-mode-hook #'flyspell-popup-auto-correct-mode)
+#+END_SRC
 * Flycheck
 On-the-fly syntax checking extension for Emacs
 [[http://www.flycheck.org/en/latest/][Link]]
@@ -131,6 +155,83 @@ M-x jedi:install-server
   (with-eval-after-load 'python
     (define-key python-mode-map (kbd "C-.") 'jedi:show-doc))
 #+END_SRC
+** Verilog
+*** Disable Verilog minibuffer when rpessing escape.
+Really helpful when using evil
+[[https://emacs.stackexchange.com/questions/38468/disable-autocompletion-abbreviation-in-verilog-mode?utm_medium%3Dorganic&utm_source%3Dgoogle_rich_qa&utm_campaign%3Dgoogle_rich_qa][link]]
+#+BEGIN_SRC emacs-lisp
+  (defun my-verilog-setup ()
+      (clear-abbrev-table verilog-mode-abbrev-table))
+  (add-hook 'verilog-mode-hook #'my-verilog-setup)
+#+END_SRC
+*** Disable auto new line
+[[https://stackoverflow.com/questions/27098826/how-to-disable-auto-new-line-in-verilog-mode-in-emacs?utm_medium%3Dorganic&utm_source%3Dgoogle_rich_qa&utm_campaign%3Dgoogle_rich_qa][link]]
+#+BEGIN_SRC emacs-lisp
+(setq verilog-auto-newline nil)
+#+END_SRC
+*** Flycheck Verilog (Verilator)
+#+BEGIN_SRC sh
+#sudo apt-get install git make autoconf g++ flex bison   # First time prerequisites
+git clone http://git.veripool.org/git/verilator   # Only first time
+
+# Each build:
+unsetenv VERILATOR_ROOT  # For csh; ignore error if on bash
+unset VERILATOR_ROOT  # For bash
+cd verilator
+git pull        # Make sure we're up-to-date
+git tag         # See what versions exist
+#git checkout master      # Use development branch (e.g. recent bug fix)
+#git checkout stable      # Use most recent release
+#git checkout v{version}  # Switch to specified release version
+autoconf        # Create ./configure script
+./configure
+make
+sudo make install
+# Now see "man verilator" or online verilator.pdf's for the example tutorials
+#+END_SRC
+** VHDL
+*** IEEE Style
+#+BEGIN_SRC emacs-lisp
+  (defun my-vhdl-mode-hook()
+    (vhdl-set-style "IEEE")
+    )
+  (add-hook 'vhdl-mode-hook 'my-vhdl-mode-hook)
+#+END_SRC
+*** Enable Stutter Mode
+#+BEGIN_SRC emacs-lisp
+  (setq vhdl-stutter-mode t)
+#+END_SRC
+    **
+** PlatformIO
+[[https://github.com/ZachMassia/platformio-mode][link]]
+#+BEGIN_SRC emacs-lisp 
+  (require 'platformio-mode)
+
+  ;; Add the required company backend.
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-irony))
+
+  ;; Enable irony for all c++ files, and platformio-mode only
+  ;; when needed (platformio.ini present in project root).
+  (add-hook 'c++-mode-hook (lambda ()
+                             (irony-mode)
+                             (irony-eldoc)
+                             (platformio-conditionally-enable)))
+
+  ;; Use irony's completion functions.
+  (add-hook 'irony-mode-hook
+            (lambda ()
+              (define-key irony-mode-map [remap completion-at-point]
+                'irony-completion-at-point-async)
+
+              (define-key irony-mode-map [remap complete-symbol]
+                'irony-completion-at-point-async)
+
+              (irony-cdb-autosetup-compile-options)))
+              
+  ;; Setup irony for flycheck.
+  (add-hook 'flycheck-mode-hook 'flycheck-irony-setup)
+#+END_SRC
 * Org Mode
 ** org-bullets mode
 Proper bullets in org mode
@@ -139,6 +240,18 @@ Proper bullets in org mode
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+END_SRC
 
+* Bottom Bar
+** Time
+#+BEGIN_SRC emacs-lisp
+  (display-time-mode 1)
+#+END_SRC
+** Powerline
+[[https://github.com/milkypostman/powerline][link]]
+#+BEGIN_SRC emacs-lisp
+  (require 'powerline)
+  (powerline-center-evil-theme)
 
+#+END_SRC
 
-
+* Things to Implement
+** TODO Add LaTeX Compiler

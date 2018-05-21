@@ -43,6 +43,19 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+(setq scroll-step 1)
+
+(setq mouse-wheel-follow-mouse 't)
+
+(require 'flyspell)
+(flyspell-mode +1)
+;;(add-hook 'text-mode-hook 'flyspell-popup-auto-correct-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
+(define-key flyspell-mode-map (kbd "C-,") #'flyspell-popup-correct)
+(add-hook 'flyspell-mode-hook #'flyspell-popup-auto-correct-mode)
+
 (global-flycheck-mode)
 ;; disable elisp
 (with-eval-after-load 'flycheck
@@ -65,5 +78,50 @@
 (with-eval-after-load 'python
   (define-key python-mode-map (kbd "C-.") 'jedi:show-doc))
 
+(defun my-verilog-setup ()
+    (clear-abbrev-table verilog-mode-abbrev-table))
+(add-hook 'verilog-mode-hook #'my-verilog-setup)
+
+(setq verilog-auto-newline nil)
+
+(defun my-vhdl-mode-hook()
+  (vhdl-set-style "IEEE")
+  )
+(add-hook 'vhdl-mode-hook 'my-vhdl-mode-hook)
+
+(setq vhdl-stutter-mode t)
+
+(require 'platformio-mode)
+
+;; Add the required company backend.
+(with-eval-after-load 'company
+  (add-to-list 'company-backends 'company-irony))
+
+;; Enable irony for all c++ files, and platformio-mode only
+;; when needed (platformio.ini present in project root).
+(add-hook 'c++-mode-hook (lambda ()
+                           (irony-mode)
+                           (irony-eldoc)
+                           (platformio-conditionally-enable)))
+
+;; Use irony's completion functions.
+(add-hook 'irony-mode-hook
+          (lambda ()
+            (define-key irony-mode-map [remap completion-at-point]
+              'irony-completion-at-point-async)
+
+            (define-key irony-mode-map [remap complete-symbol]
+              'irony-completion-at-point-async)
+
+            (irony-cdb-autosetup-compile-options)))
+            
+;; Setup irony for flycheck.
+(add-hook 'flycheck-mode-hook 'flycheck-irony-setup)
+
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(display-time-mode 1)
+
+(require 'powerline)
+(powerline-center-evil-theme)

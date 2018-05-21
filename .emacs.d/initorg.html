@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>initorg</title>
+<!-- 2018-05-14 Mon 19:06 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="brandonw" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">initorg</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. General Emacs Settings</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Title</a></li>
+<li><a href="#sec-1-2">1.2. Evil Mode</a></li>
+<li><a href="#sec-1-3">1.3. Theme</a></li>
+<li><a href="#sec-1-4">1.4. Line Numbers</a></li>
+<li><a href="#sec-1-5">1.5. Interactively Do Things Mode</a></li>
+<li><a href="#sec-1-6">1.6. Package Repositories</a></li>
+<li><a href="#sec-1-7">1.7. Electric Pair</a></li>
+<li><a href="#sec-1-8">1.8. Menu Settings</a></li>
+<li><a href="#sec-1-9">1.9. Highlight Matching Delimiters</a></li>
+<li><a href="#sec-1-10">1.10. Tab Mode</a></li>
+<li><a href="#sec-1-11">1.11. y/n Confirm</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Flycheck</a></li>
+<li><a href="#sec-3">3. Language Specific Settings</a>
+<ul>
+<li><a href="#sec-3-1">3.1. C/C++</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. 4 spaces for tab</a></li>
+<li><a href="#sec-3-1-2">3.1.2. Linux Style</a></li>
+<li><a href="#sec-3-1-3">3.1.3. Long Name Setting</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. Python</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Jedi Auto Complete</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Jedi Documentation Binding C-.</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3. Verilog</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. Disable Verilog minibuffer when rpessing escape.</a></li>
+<li><a href="#sec-3-3-2">3.3.2. Disable auto new line</a></li>
+<li><a href="#sec-3-3-3">3.3.3. Flycheck Verilog (Verilator)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Org Mode</a>
+<ul>
+<li><a href="#sec-4-1">4.1. org-bullets mode</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Brandon Waller Emacs Init 
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> General Emacs Settings</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Title</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq frame-title-format"Emacs")
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Evil Mode</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Vim keybindings, and editor in emacs
+<a href="https://github.com/emacs-evil/evil">Repo</a>
+<a href="https://www.emacswiki.org/emacs/Evil">Wiki</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Theme</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+doom-peacock 
+<a href="https://github.com/hlissner/emacs-doom-themes">repo</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'doom-themes)
+(load-theme 'doom-one t)
+
+(doom-themes-visual-bell-config)
+(doom-themes-org-config)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Line Numbers</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-nlinum-mode t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Interactively Do Things Mode</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'ido)
+(ido-mode t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Package Repositories</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+		    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (&lt; emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Electric Pair</h3>
+<div class="outline-text-3" id="text-1-7">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(electric-pair-mode 1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Menu Settings</h3>
+<div class="outline-text-3" id="text-1-8">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-9" class="outline-3">
+<h3 id="sec-1-9"><span class="section-number-3">1.9</span> Highlight Matching Delimiters</h3>
+<div class="outline-text-3" id="text-1-9">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(show-paren-mode)
+(setq show-paren-delay 0)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-10" class="outline-3">
+<h3 id="sec-1-10"><span class="section-number-3">1.10</span> Tab Mode</h3>
+<div class="outline-text-3" id="text-1-10">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">;; attempt to allow emacs tabs to be read in other applciations
+;; may or may not do anything
+(setq indent-tabs-mode nil)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-11" class="outline-3">
+<h3 id="sec-1-11"><span class="section-number-3">1.11</span> y/n Confirm</h3>
+<div class="outline-text-3" id="text-1-11">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(fset 'yes-or-no-p 'y-or-n-p)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Flycheck</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+On-the-fly syntax checking extension for Emacs
+<a href="http://www.flycheck.org/en/latest/">Link</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-flycheck-mode)
+;; disable elisp
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+</pre>
+</div>
+<p>
+Additional Config Requirements
+SH:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo pip install virtualenv
+</pre>
+</div>
+<p>
+Emacs:
+</p>
+<pre class="example">
+M-x jedi:install-server
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Language Specific Settings</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> C/C++</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> 4 spaces for tab</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq c-basic-offset 4)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Linux Style</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq c-default-style "linux")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> Long Name Setting</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun indent-setting ()
+  (c-set-offset 'arglist-intro '+))
+(add-hook 'java-mode-hook 'indent-setting)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Python</h3>
+<div class="outline-text-3" id="text-3-2">
+</div><div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Jedi Auto Complete</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+<a href="https://github.com/tkf/emacs-jedi">Repo</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Jedi Documentation Binding C-.</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(with-eval-after-load 'python
+  (define-key python-mode-map (kbd "C-.") 'jedi:show-doc))
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Verilog</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Disable Verilog minibuffer when rpessing escape.</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Really helpful when using evil
+<a href="https://emacs.stackexchange.com/questions/38468/disable-autocompletion-abbreviation-in-verilog-mode?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa">link</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun my-verilog-setup ()
+    (clear-abbrev-table verilog-mode-abbrev-table))
+(add-hook 'verilog-mode-hook #'my-verilog-setup)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Disable auto new line</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+<a href="https://stackoverflow.com/questions/27098826/how-to-disable-auto-new-line-in-verilog-mode-in-emacs?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa">link</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq verilog-auto-newline nil)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> Flycheck Verilog (Verilator)</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<div class="org-src-container">
+
+<pre class="src src-sh">#sudo apt-get install git make autoconf g++ flex bison   # First time prerequisites
+git clone http://git.veripool.org/git/verilator   # Only first time
+
+# Each build:
+unsetenv VERILATOR_ROOT  # For csh; ignore error if on bash
+unset VERILATOR_ROOT  # For bash
+cd verilator
+git pull        # Make sure we're up-to-date
+git tag         # See what versions exist
+#git checkout master      # Use development branch (e.g. recent bug fix)
+#git checkout stable      # Use most recent release
+#git checkout v{version}  # Switch to specified release version
+autoconf        # Create ./configure script
+./configure
+make
+sudo make install
+# Now see "man verilator" or online verilator.pdf's for the example tutorials
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Org Mode</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> org-bullets mode</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Proper bullets in org mode
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: brandonw</p>
+<p class="date">Created: 2018-05-14 Mon 19:06</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

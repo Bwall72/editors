@@ -2,31 +2,133 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/brandonw/arduino_fun/take3/" . "src/")
+ ("/home/brandonw/arduino_fun/take2/" . "src/")
+ ("/home/brandonw/arduino_fun/esp32_test/" . "src/")
+ ("/home/brandonw/arduino_fun/" . "take3/")
+ ("/home/brandonw/Desktop/alarm_clock/alarm_clock/" . "_ngo/")
+ ("/home/brandonw/Desktop/alarm_clock/" . "alarm_clock/")
+ ("/home/brandonw/Desktop/" . "alarm_clock/")
+ ("/usr/" . "local/")
+ ("/" . "usr/")
+ ("/usr/local/" . "verilator/")
+ ("/home/brandonw/verilog_fun/" . "alarm_clock/")
  ("/home/brandonw/.emacs.d/" . "eshell/")
- ("/home/brandonw/" . ".emacs.d/")
+ ("/home/brandonw/" . "arduino_fun/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/brandonw/python_fun/"
+ "/home/brandonw/arduino_fun/take3/src/"
+ "/home/brandonw/arduino_fun/take3/"
+ "/home/brandonw/arduino_fun/take2/"
+ "/home/brandonw/arduino_fun/take2/src/"
+ "/home/brandonw/arduino_fun/esp32_test/src/"
  "/home/brandonw/.emacs.d/"
  "/home/brandonw/"
+ "/usr/lib/llvm-4.0/lib/"
+ "/home/brandonw/arduino_fun/esp32_test/"
+ "/home/brandonw/arduino_fun/esp32_test/lib/"
+ "/home/brandonw/arduino_fun/"
+ "/home/brandonw/Documents/"
+ "/home/brandonw/clisp_not_fun/"
+ "/home/brandonw/vhdl_fun/"
+ "/home/brandonw/vhdl_fun/dff/"
+ "/usr/local/bin/"
+ "/home/brandonw/verilog_fun/"
+ "/usr/local/verilator/examples/hello_world_c/"
+ "/home/brandonw/verilog_fun/alarm_clock/"
+ "/home/brandonw/editors/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "initorg.org"
- "test.c"
  "test.py"
- "1"
- "initorg.el"
- "init.el"
+ "main.cpp"
+ "platformio.ini"
+ ".projectile"
+ "initorg.org"
+ "initorg.org~"
+ "libclang-4.0.so.1"
+ "test.cpp"
+ "readme.txt"
+ "summer_classes.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/brandonw/.emacs.d/" (23289 15557 692689 900000) "initorg.org~" "eshell/" "./" "initorg.el~" ".python-environments/" "init.el" "ac-comphist.dat" "initorg.org" "evil/" "elpa/" "init.el~" "../" "initorg.el" "kkcrc" "ido.last~" "auto-save-list/" "ido.last")
+ ("/home/brandonw/python_fun/" (23294 31973 946772 764000) "./" "../" "test.py~" "test.py")
 
- ("/home/brandonw/" (23289 16018 214186 322000) "examples.desktop" "initorg.org~" ".emacs.d/" "Pictures/" ".emacs~" ".cache/" ".pki/" ".sudo_as_admin_successful" "install.sh" ".ssh/" ".#test.c" ".mozilla/" "./" "test.c~" "Templates/" "install.sh~" ".local/" ".keras/" "Desktop/" ".viminfo" "initorg.html" "a.out" "neural_network/" "ltmain.sh" ".gnupg/" ".config/" "../" "test.py~" ".ICEauthority" ".bash_logout" "Videos/" ".gitconfig" "Public/" "test.py" "#test.py#" "test.c" ".profile" "Documents/" "editors/" ".gnome/" ".bashrc" "Music/" "install/" "Downloads/" ".bash_history")
+ ("/home/brandonw/.emacs.d/" (23294 27691 253545 478000) "session.10826afb4a61881455152635861518071700000013140098" "initorg.org~" "initorg.html~" "eshell/" "./" "initorg.el~" "abbrev_defs" ".python-environments/" "init.el" "ac-comphist.dat" "initorg.org" "initorg.html" "evil/" "elpa/" "init.el~" "initorg.tex" "../" "initorg.el" "kkcrc" "ido.last~" "irony/" "session.10a541b7d8f39e4ed715262843396387000000012360138" "auto-save-list/" "ido.last")
+
+ ("/home/brandonw/arduino_fun/take3/src/" (23294 27912 408224 461000) "./" "../" "main.cpp" "main.cpp~")
+
+ ("/home/brandonw/arduino_fun/" (23294 26739 441587 225000) "./" "take3/" "test.cpp" "esp32_test/" "../" "take2/")
+
+ ("/home/brandonw/" (23294 27702 469274 492000) "examples.desktop" "initorg.org~" ".emacs.d/" "Pictures/" ".emacs~" ".cache/" "ghdl/" ".pki/" ".sudo_as_admin_successful" "install.sh" ".ssh/" ".mozilla/" "./" "test.c~" "Templates/" "install.sh~" ".local/" ".keras/" "Desktop/" ".viminfo" "initorg.html" "arduino_fun/" "neural_network/" "iverilog/" "ghdl-updates-ghdl-updates.git/" "ltmain.sh" ".wget-hsts" ".gnupg/" ".config/" "../" "verilog_fun/" "test.py~" ".ICEauthority" ".dbus/" ".bash_logout" "Videos/" ".aspell.en.prepl" ".gitconfig" "Public/" ".aspell.en.pws" "test.py" "#test.py#" "test.c" ".profile" "clisp_not_fun/" "vhdl_fun/" "Documents/" ".gconf/" "editors/" ".vscode/" ".gnome/" ".bashrc" "Music/" "install/" "Downloads/" ".bash_history" ".platformio/" "gtk/")
+
+ ("/home/brandonw/arduino_fun/take3/" (23294 27617 139339 823000) "src/" "./" ".pioenvs/" ".gitignore" ".projectile" "../" ".travis.yml" "platformio.ini" "lib/" ".clang_complete")
+
+ ("/home/brandonw/arduino_fun/take2/" (23294 26577 30119 457000) "src/" "./" ".pioenvs/" ".gitignore" ".projectile" "../" ".travis.yml" "platformio.ini" "lib/" ".clang_complete")
+
+ ("/home/brandonw/arduino_fun/take2/src/" (23294 26260 387796 11000) "./" "../" "main.cpp" "main.cpp~")
+
+ ("/home/brandonw/arduino_fun/esp32_test/src/" (23294 26042 679467 539000) "./" "../" "main.cpp" "main.cpp~")
+
+ ("/usr/lib/llvm-4.0/lib/" (23294 25766 43111 188000) "libclangBasic.a" "libclang-4.0.so" "libLLVMSystemZAsmPrinter.a" "libclangTidy.a" "libLLVMPowerPCAsmPrinter.a" "libLLVMSystemZDisassembler.a" "libLLVMLanaiCodeGen.a" "libLLVMPasses.a" "libLLVMDebugInfoMSF.a" "clang/" "libLLVMIRReader.a" "libclangFrontend.a" "libLLVMSparcInfo.a" "libLLVMXCoreDisassembler.a" "libLLVMTransformUtils.a" "libLLVMMSP430Desc.a" "libLLVMLineEditor.a" "libclangASTMatchers.a" "libLLVMX86Utils.a" "libLLVMXCoreDesc.a" "libclangEdit.a" "libclangTidyMPIModule.a" "libclangTidyReadabilityModule.a" "libLLVMAMDGPUAsmParser.a" "libLLVMPowerPCCodeGen.a" "libclangLex.a" "libLLVMRISCVDesc.a" "libLLVMMCDisassembler.a" "libLLVMAMDGPUDesc.a" "libLLVMLanaiInstPrinter.a" "libLLVMDebugInfoCodeView.a" "libLTO.so.4.0.1" "libclangSema.a" "libLLVMAnalysis.a" "libfindAllSymbols.a" "libLLVMLibDriver.a" "libLLVMOrcJIT.a" "libLLVMAsmParser.a" "libclangIncludeFixerPlugin.a" "libclang-4.0.so.1" "libclangTidyMiscModule.a" "libclangApplyReplacements.a" "libLLVMBitReader.a" "libLLVMPowerPCAsmParser.a" "libclang-4.0.1.so" "libLLVMMSP430Info.a" "libclangAnalysis.a" "libLLVMSymbolize.a" "libLLVMMSP430AsmPrinter.a" "libclangReorderFields.a" "libLLVMMipsAsmPrinter.a" "libLLVMX86Disassembler.a" "libclangStaticAnalyzerCheckers.a" "libLLVMAMDGPUCodeGen.a" "libclangDriver.a" "libLLVMMSP430CodeGen.a" "libLLVMObjectYAML.a" "BugpointPasses.so" "libLLVMBPFDesc.a" "libLLVMHexagonDesc.a" "libLLVMAMDGPUAsmPrinter.a" "libLLVM.so" "libLLVMGlobalISel.a" "libLLVMTableGen.a" "libLLVMDebugInfoPDB.a" "libLLVMAArch64Utils.a" "libLLVMObjCARCOpts.a" "libLLVMBPFDisassembler.a" "libclangFrontendTool.a" "libclangFormat.a" "libLLVMAArch64Info.a" "libLLVMSystemZInfo.a" "libLLVMBPFAsmPrinter.a" "libLLVMX86Desc.a" "libLLVMMIRParser.a" "libLLVMSystemZAsmParser.a" "libclangQuery.a" "libLLVMXCoreInfo.a" "libLLVMObject.a" "libLLVMMCJIT.a" "libLLVM-4.0.1.so.1" "libLLVMAArch64AsmParser.a" "libclangSerialization.a" "libclangCodeGen.a" "libLLVMTarget.a" "libclangTidyPerformanceModule.a" "libclangChangeNamespace.a" "libLLVMDemangle.a" "libLLVMExecutionEngine.a" "libLLVMVectorize.a" "libLLVMLTO.a" "libLLVMNVPTXDesc.a" "libclangStaticAnalyzerFrontend.a" "libLLVMRISCVCodeGen.a" "libLLVMipo.a" "libclangTidyModernizeModule.a" "libLLVMSystemZDesc.a" "libLLVMSparcCodeGen.a" "libLLVMCore.a" "libLLVMMC.a" "libLLVMOption.a" "libLLVMARMAsmParser.a" "libclangToolingCore.a" "libLLVMLanaiDisassembler.a" "libclangIncludeFixer.a" "libLLVMLinker.a" "libclang.so" "libLLVMX86CodeGen.a" "libLLVMARMAsmPrinter.a" "libLLVMSparcDesc.a" "libLLVMSparcAsmPrinter.a" "libLLVMSparcDisassembler.a" "libLLVMInstCombine.a" "libLLVMNVPTXCodeGen.a" "libLLVMARMDesc.a" "libclangTidyCppCoreGuidelinesModule.a" "libLLVMScalarOpts.a" "libLLVMCoverage.a" "LLVMPolly.so" "libLLVMBPFCodeGen.a" "libLLVMSupport.a" "libLLVMInstrumentation.a" "libLLVMARMCodeGen.a" "libLLVMNVPTXAsmPrinter.a" "libLLVMMipsDesc.a" "libclangTidyGoogleModule.a" "libLLVMDebugInfoDWARF.a" "libLLVMAArch64AsmPrinter.a" "libLLVMMipsCodeGen.a" "libLLVMMCParser.a" "libLTO.so.4" "libclangTidyLLVMModule.a" "libclangARCMigrate.a" "libclangRewrite.a" "libLLVMMipsDisassembler.a" "libLLVMAMDGPUDisassembler.a" "libclangTooling.a" "libLLVM-4.0.so.1" "libLLVMX86AsmPrinter.a" "libLLVMXCoreCodeGen.a" "libLLVMLanaiAsmParser.a" "libclangParse.a" "libLLVMPowerPCDesc.a" "libclangTidyBoostModule.a" "libLLVMHexagonDisassembler.a" "libLLVMPowerPCInfo.a" "libclangRename.a" "libclangDynamicASTMatchers.a" "libclangIndex.a" "libLLVMXRay.a" "libclangMove.a" "libLLVMSparcAsmParser.a" "libLLVMX86Info.a" "libLLVMAMDGPUInfo.a" "libLLVMAArch64Disassembler.a" "LLVMgold.so" "libLLVMHexagonCodeGen.a" "libLLVMXCoreAsmPrinter.a" "libclangStaticAnalyzerCore.a" "libLLVMInterpreter.a" "libLLVMBitWriter.a" "libLLVMHexagonInfo.a" "LLVMHello.so" "libLLVM-4.0.so" "libLLVMPowerPCDisassembler.a" "libLLVMARMDisassembler.a" "libLLVMCodeGen.a" "libLLVMBPFInfo.a" "libclangRewriteFrontend.a" "libclangTidyCERTModule.a" "libLLVMNVPTXInfo.a" "libLLVMAsmPrinter.a" "libLLVMX86AsmParser.a" "libLLVMLanaiInfo.a" "libclangTidyPlugin.a" "libLLVMRuntimeDyld.a" "libLLVMSystemZCodeGen.a" "libLLVMAArch64Desc.a" "cmake/" "libLLVMARMInfo.a" "libLLVMProfileData.a" "libLLVMAMDGPUUtils.a" "libLLVM-4.0.1.so" "libLLVMMipsAsmParser.a" "libclangTidyUtils.a" "libLLVMMipsInfo.a" "libLLVMLanaiDesc.a" "libLLVMAArch64CodeGen.a" "libLLVMHexagonAsmParser.a" "libLLVMSelectionDAG.a" "libLLVMCoroutines.a" "libclang.so.1" "libLTO.so" "libclangAST.a" "libLLVMRISCVInfo.a" "../" "./")
+
+ ("/home/brandonw/Documents/" (23294 24362 135933 148000) "summer_classes.html~" "./" "summer_classes.org" "summer_classes.org~" "PlatformIO/" "../" "summer_classes.html")
+
+ ("/home/brandonw/arduino_fun/esp32_test/" (23294 23984 595180 753000) "src/" "./" ".pioenvs/" "test.cpp" ".gitignore" "../" ".travis.yml" "platformio.ini" "lib/" "test.cpp~" ".clang_complete")
+
+ ("/home/brandonw/.platformio/" (23294 24335 640654 872000) "homestate.json" ".cache/" "./" "appstate.json" "packages/" "../" "penv/" "lib/" "platforms/")
+
+ ("/usr/local/bin/" (23294 23224 433125 238000) "vvp" "gen-ctl-io" "meep" "platformio" "h5fromtxt" "miniterm.py" "ghdl" "h5topng" "./" "h5tovtk" "iverilog-vpi" "piodebuggdb" "iverilog" "harminv" "../" "bottle.pyc" "virtualenv" "miniterm.pyc" "bottle.py" "chardetect" "mpb-split" "pio" "mpb-data" "mpb" "h5totxt")
+
+ ("/home/brandonw/arduino_fun/esp32_test/lib/" (23294 23392 208910 494000) "./" "../" "readme.txt")
+
+ ("/home/brandonw/vhdl_fun/dff/" (23291 42432 58174 169000) "dff.vcd" "./" "dff_tb.vhdl~" "dff_tb.vhdl" "../" "dff.vhdl~" "dff.vhdl" "work-obj93.cf")
+
+ ("/home/brandonw/clisp_not_fun/" (23291 49458 594137 627000) "test.cl~" "./" "test.cl" "../" "#test.cl#")
+
+ ("/home/brandonw/vhdl_fun/" (23291 40880 974895 541000) "dff/" "ha.vhd~" "ha.vhdl" "./" "ha_tb.vhd~" "#ha.vhdl#" "and_gate_tb.vhdl" "and_gate.vhdl~" "../" "and_gate_tb.vhdl~" "and_gate.vhdl" "ha_tb.vhdl" "ha.vhdl~" "ha_tb.vhdl~" "e~half_adder_tb.lst" "work-obj93.cf" "e~ha_tb.lst" "and_gate.vcd" "ha.vcd")
+
+ ("/home/brandonw/.emacs.d/auto-save-list/" (23291 27377 310501 790000) "./" "../" ".saves-11373-brandonw-Z97N-Gaming-5~")
+
+ ("/usr/share/info/" (23290 20677 753087 581000) "speech-dispatcher.info.gz" "gnupg-module-overview.png" "bc.info.gz" "dir.old" "m4.info-1.gz" "automake-1.15.info.gz" "automake-1.15.info-1.gz" "flex.info.gz" "./" "sed.info.gz" "time.info.gz" "dir" "automake-1.15.info-2.gz" "gzip.info.gz" "nano.info.gz" "flex.info-1.gz" "autosprintf.info.gz" "../" "grep.info.gz" "flex.info-2.gz" "dc.info.gz" "find.info.gz" "gperf.info.gz" "mtools.info.gz" "gnupg.info-2.gz" "m4.info-2.gz" "grub.info.gz" "spd-say.info.gz" "diffutils.info.gz" "grub-dev.info.gz" "ghdl.info.gz" "gnupg.info-1.gz" "m4.info.gz" "coreutils.info.gz" "ssip.info.gz" "emacs-25/" "ed.info.gz" "wget.info.gz" "gnupg-card-architecture.png" "find-maint.info.gz" "gettext.info.gz" "gnupg.info.gz" "rluserman.info.gz")
+
+ ("/home/brandonw/Desktop/alarm_clock/alarm_clock/" (23291 20339 365231 442000) "alarm_clock_envsettings.html" "alarm_clk.prj" "alarm_clk_bitgen.xwbt" "alarm_clk_tb_translate.prj" "alarm_clk_map.mrp" "alarm_clk_map.xrpt" "alarm_clk_tb_par.prj" "alarm_clk.cmd_log" "alarm_clk.pad" "alarm_clk_pad.txt" "alarm_clk.xst" "alarm_clk_summary.xml" "alarm_clk_map.ngm" "alarm_clk.ngc" "alarm_clk.xpi" "alarm_clk.unroutes" "xilinxsim.ini" "./" "alarm_clk.ut" "usage_statistics_webtalk.html" "alarm_clock_xst.xrpt" "alarm_clock.xst" "alarm_clock.v" "alarm_clk.lso" "alarm_clock.prj" "alarm_clk_xst.xrpt" "alarm_clk_summary.html" "isim/" "fuseRelaunch.cmd" "alarm_clk.bgn" "alarm_clk_map.map" "alarm_clk_tb_stx_beh.prj" "webtalk_pn.xml" "alarm_clock.cmd_log" "alarm_clk.ptwx" "alarm_clk_tb_isim_translate.exe" "alarm_clk.par" "iseconfig/" "netgen/" "../" "alarm_clk_usage.xml" "alarm_clk.drc" "fuse.xmsgs" "alarm_clk.twr" "alarm_clock.lso" "xlnx_auto_0_xdb/" "alarm_clk.bit" "alarm_clk_ngdbuild.xrpt" "_ngo/" "alarm_clk.pcf" "isim.cmd" "alarm_clk.twx" "alarm_clk.syr" "_xmsgs/" "alarm_clk_pad.csv" "alarm_clk_tb_isim_translate.wdb" "alarm_clk_map.ncd" "alarm_clk_guide.ncd" "fuse.log" "alarm_clk.ngr" "alarm_clk_envsettings.html" "webtalk.log" "alarm_clk_tb.v" "#alarm_clock.v#" "alarm_clock.gise" ".#alarm_clock.v" "alarm_clk.ncd" "alarm_clk_tb_beh.prj" "alarm_clock.xise" "alarm_clk_par.xrpt" "alarm_clk_tb_isim_beh1.wdb" "alarm_clock.syr" "alarm_clock_summary.html" "isim.log" "alarm_clk_tb_isim_par.exe" "alarm_clk.bld" "alarm_clk_tb_isim_par.wdb" "alarm_clk_tb_isim_beh.wdb" "alarm_clock.ucf" "alarm_clk.stx" "xst/" "alarm_clk_tb_isim_beh.exe" "alarm_clk.ngd")
+
+ ("/home/brandonw/Desktop/alarm_clock/alarm_clock/_ngo/" (23278 5426 0 0) "./" "../" "netlist.lst")
+
+ ("/home/brandonw/Desktop/alarm_clock/" (23291 20175 566249 989000) "alarm_clock/" "synthesis_compiler_output.txt" "syntesis_report.txt" "./" "top_3_modules.PNG" "../" "top_level.PNG")
+
+ ("/home/brandonw/Desktop/" (23291 20175 490249 969000) "alarm_clock/" "logic_final_project_images/" "./" "../" "Meep/")
+
+ ("/usr/share/emacs/25.2/lisp/progmodes/" (23188 24632 665162 806000) "cperl-mode.elc" "cc-mode.el.gz" "modula2.elc" "gud.el.gz" "vhdl-mode.elc" "idlw-toolbar.el.gz" "ebnf-iso.el.gz" "dcl-mode.elc" "inf-lisp.elc" "ebnf-bnf.el.gz" "glasses.el.gz" "cc-guess.elc" "idlwave.elc" "cfengine.elc" "cc-mode.elc" "bat-mode.elc" "idlw-complete-structtag.elc" "executable.el.gz" "asm-mode.el.gz" "ps-mode.el.gz" "js.elc" "prog-mode.el.gz" "cc-menus.elc" "cc-bytecomp.el.gz" "grep.el.gz" "ada-stmt.el.gz" "bat-mode.el.gz" "fortran.elc" "verilog-mode.el.gz" "perl-mode.elc" "cc-menus.el.gz" "gdb-mi.elc" "project.el.gz" "cc-fonts.el.gz" "ebnf-ebx.elc" "ebnf-dtd.elc" "tcl.el.gz" "cc-align.elc" "simula.elc" "inf-lisp.el.gz" "ruby-mode.el.gz" "mixal-mode.elc" "python.el.gz" "cc-cmds.elc" "ebnf2ps.el.gz" "cwarn.el.gz" "pascal.el.gz" "vera-mode.elc" "xref.elc" "idlw-complete-structtag.el.gz" "gud.elc" "ebnf2ps.elc" "f90.elc" "elisp-mode.el.gz" "cc-vars.elc" "ld-script.elc" "xscheme.elc" "icon.el.gz" "ebnf-bnf.elc" "m4-mode.el.gz" "perl-mode.el.gz" "hideif.elc" "cperl-mode.el.gz" "bug-reference.elc" "ebnf-abn.elc" "cpp.el.gz" "icon.elc" "ebnf-otz.el.gz" "flymake.el.gz" "sql.elc" "glasses.elc" "ebnf-dtd.el.gz" "cc-bytecomp.elc" "ada-xref.elc" "cc-styles.el.gz" "prog-mode.elc" "ebnf-otz.elc" "f90.el.gz" "ld-script.el.gz" "subword.el.gz" "ada-stmt.elc" "cc-langs.el.gz" "python.elc" "autoconf.elc" "antlr-mode.el.gz" "octave.elc" "cfengine.el.gz" "opascal.elc" "mantemp.elc" "executable.elc" "compile.el.gz" "idlw-toolbar.elc" "ebnf-yac.elc" "meta-mode.elc" "cmacexp.el.gz" "cc-defs.elc" "etags.el.gz" "cc-vars.el.gz" "prolog.el.gz" "etags.elc" "which-func.elc" "prolog.elc" "xscheme.el.gz" "vera-mode.el.gz" "cc-engine.el.gz" "idlw-shell.elc" "ebnf-yac.el.gz" "ebrowse.elc" "verilog-mode.elc" "antlr-mode.elc" "cpp.elc" "hideif.el.gz" "flymake.elc" "ada-mode.el.gz" "which-func.el.gz" "fortran.el.gz" "hideshow.el.gz" "xref.el.gz" "cc-align.el.gz" "mixal-mode.el.gz" "tcl.elc" "simula.el.gz" "sh-script.el.gz" "asm-mode.elc" "cc-awk.el.gz" "gdb-mi.el.gz" "sql.el.gz" "ebnf-abn.el.gz" "cc-guess.el.gz" "cc-defs.el.gz" "cc-awk.elc" "bug-reference.el.gz" "hideshow.elc" "compile.elc" "idlw-help.el.gz" "autoconf.el.gz" "cc-fonts.elc" "ruby-mode.elc" "sh-script.elc" "ebnf-iso.elc" "grep.elc" "elisp-mode.elc" "ada-xref.el.gz" "project.elc" "cwarn.elc" "octave.el.gz" "cc-langs.elc" "ada-prj.elc" "cc-styles.elc" "idlw-help.elc" "ebnf-ebx.el.gz" "ada-prj.el.gz" "make-mode.el.gz" "pascal.elc" "meta-mode.el.gz" "dcl-mode.el.gz" "modula2.el.gz" "mantemp.el.gz" "cc-cmds.el.gz" "js.el.gz" "scheme.elc" "ps-mode.elc" "make-mode.elc" "cc-engine.elc" "vhdl-mode.el.gz" "ada-mode.elc" "cmacexp.elc" "idlw-shell.el.gz" "idlwave.el.gz" "subword.elc" "opascal.el.gz" "ebrowse.el.gz" "scheme.el.gz" "m4-mode.elc" "../" "./")
+
+ ("/usr/local/" (23290 18540 114733 790000) "bin/" "src/" "./" "etc/" "../" "libexec/" "share/" "include/" "games/" "man/" "lib/" "sbin/" "info/")
+
+ ("/usr/" (23119 57725 0 0) "bin/" "src/" "./" "../" "share/" "local/" "include/" "games/" "lib/" "sbin/")
+
+ ("/home/brandonw/verilog_fun/" (23290 13288 762708 535000) "alarm_clock/" "./" "ha_tb.vt" "test.v" "ha.v" "ha_tb.v~" "a.out" "ha_tb.v" "test.vcd" "../" "#test.v#" "test.v~" "dsn" "ha.v~")
+
+ ("/usr/local/verilator/examples/hello_world_c/" (23290 5848 31620 445000) "top.v" "./" "Makefile" ".gitignore" "../" "sim_main.cpp" "obj_dir/")
+
+ ("/usr/local/verilator/" (23290 5387 316736 267000) "internals.pod" "README.pod" "configure.ac" "mkinstalldirs" "bin/" "src/" "./" ".git/" "doxygen-mainpage" "COPYING" ".gitignore" "nodist/" "Artistic" "../" "MANIFEST.SKIP" "TODO" "examples/" "install-sh" "Makefile.in" "test_regress/" "COPYING.LESSER" "Changes" "verilator.pc.in" "include/" "doxygen.config")
+
+ ("/home/" (23188 24368 419627 500000) "./" "../" "brandonw/")
+
+ ("/home/brandonw/verilog_fun/alarm_clock/" (23290 3476 277701 613000) "notes.org" "alarm_clock.v~" "alarm_tb.v~" "clock_divider.v~" "alarm.v~" "./" "alarm_clock.v" "alarm.v" "clock_divider_test.vcd" "time_count2.v" "alarm2.v~" "clock_divider.v" "alarm_tb2.v~" "alarm2.v" "a.out" "alarm_set_test.vcd" "time_count_tb.v~" "../" "clock_divider_test.tb" "alarm_set_test2.vcd" "alarm_clock_tb.v" "clock_divider_tb.v" "alarm_tb.v" "time_count_tb.v" "time_count_tb_2.v" "dsn" "clock_divider_tb.v~" "alarm_tb2.v" "time_count_test.vcd" "alarm_clock_tb.v~" "time_count.v" "time_count.v~" "time_count2.v~" "time_count_tb_2.v~")
+
+ ("/home/brandonw/verilator/" (23290 4632 922709 287000) "internals.pod" "README.pod" "configure.ac" "mkinstalldirs" "config.status" "bin/" "src/" "./" ".git/" "verilator.1" "doxygen-mainpage" "COPYING" "Makefile" ".gitignore" "nodist/" "Artistic" "verilator_coverage.1" "../" "autom4te.cache/" "MANIFEST.SKIP" "TODO" "examples/" "install-sh" "Makefile.in" "test_regress/" "config.log" "configure" "COPYING.LESSER" "Changes" "verilator.pc.in" "include/" "verilator_profcfunc.1" "doxygen.config" "verilator.pc")
+
+ ("/home/brandonw/editors/" (23289 16674 922556 538000) ".emacs.d/" ".gitignore~" "./" ".git/" ".gitignore" "README.md" "../")
+
+ ("/home/brandonw/iverilog/" (23289 51774 306936 326000) "vvp/" "elab_sig_analog.o" "t-dll-api.o" "PTask.cc" "netqueue.cc" ".gitattributes" "discipline.h" "elab_lval.o" "PTask.o" "netclass.cc" "netenum.o" "netscalar.h" "PSpec.h" "elab_scope.o" "iverilog-vpi.sh" "nettypes.h" "parse_misc.o" "net_expr.cc" "net_func.o" "netenum.h" "PGenerate.cc" "scripts/" "PFunction.cc" "net_nex_output.o" "sys_funcs.cc" "emit.o" "symbol_search.o" "t-dll-api.cc" "synth2.cc" "property_qual.h" "synth.o" "mkinstalldirs" "version.c" "xilinx-hint.txt" "config.status" "elaborate.cc" "netscalar.cc" "parse.y" "AStatement.cc" "ivl_assert.h" "net_func_eval.o" "pform_string_type.o" "AStatement.o" "verireal.cc" "verireal.o" "pform.cc" "pad_to_width.cc" "Module.o" "developer-quick-start.txt" "macosx.txt" "INSTALL" "pform_types.o" "PPackage.o" "lexor.lex" "BUGS.txt" "verinum.o" "version_tag.h" "PModport.h" "pform_disciplines.cc" "net_assign.o" "async.o" "load_module.o" "net_tran.o" "net_proc.cc" "configure.in" "dep/" "netqueue.o" "pform.o" "symbol_search.cc" "parse_misc.cc" "Statement.o" "net_proc.o" "Module.h" "netparray.cc" "pform_disciplines.o" "solaris/" "config.h" "dup_expr.o" "elab_type.o" "_pli_types.h.in" "PExpr.cc" "version.exe" "PEvent.h" ".git/" "PExpr.o" "net_event.o" "sync.cc" "ivl_target_priv.h" "pform_class_type.cc" "verinum.h" "svector.h" "lexor_keyword.h" "target.cc" "netdarray.h" "LineInfo.o" "async.cc" "netclass.o" "cppcheck.sup" "PScope.o" "netenum.cc" "PEvent.o" "synth.cc" "pform_types.h" "t-dll.h" "net_udp.o" "elab_sig.cc" "libmisc/" "netlist.txt" "PModport.cc" "iverilog-vpi" "elab_anet.cc" "vpi_user.h" "PScope.cc" "net_scope.o" "verinum.cc" "netscalar.o" "tgt-sizer/" "parse.h" "COPYING" "pform_package.cc" "Makefile" "iverilog-vpi.man" "README.txt" "PWire.h" "net_tran.cc" "netlist.cc" "net_modulo.cc" "net_nex_input.o" "Module.cc" "netmisc.cc" "dosify.c" ".gitignore" "PClass.h" "pform_struct_type.cc" "pad_to_width.o" "net_nex_input.cc" "nodangle.o" "driver/" "util.h" "parse.output" "lexor.cc" "Attrib.o" "PModport.o" "vpi.txt" "syn-rules.output" "PExpr.h" "_pli_types.h" "syn-rules.o" "tgt-fpga/" "eval_tree.cc" "tgt-blif/" "functor.o" "pform_package.o" "t-dll-expr.o" "autom4te.cache/" "eval.cc" "PDelays.cc" "net_nex_output.cc" "t-dll-expr.cc" "t-dll-analog.o" "net_udp.cc" "net_link.cc" "link_const.cc" "elab_net.cc" "ivl_target.h" "ieee1364-notes.txt" "nettypes.cc" "PClass.cc" "lexor_keyword.o" "PScope.h" "PUdp.o" "net_analog.cc" "eval_tree.o" "netdarray.cc" "check.vvp" "driver-vpi/" "netstruct.o" "stamp-config-h" "elab_lval.cc" "QUICK_START.txt" "main.o" "HName.o" "tgt-vhdl/" "tgt-pal/" "examples/" "net_scope.cc" "design_dump.o" "netparray.h" "elab_expr.o" "vpi/" "eval.o" "netclass.h" "nodangle.cc" "pform_analog.cc" "install-sh" "PDelays.h" "Makefile.in" "sync.o" "net_event.cc" "cprop.o" "target.h" "syn-rules.cc" "PPackage.h" "cprop.cc" "main.cc" "elab_sig.o" "config.guess" "PWire.o" "elaborate.o" "nettypes.o" "elab_expr.cc" "netqueue.h" "Statement.cc" "config.sub" "PClass.o" "pform_types.cc" "netstruct.h" "t-dll-proc.cc" "t-dll-analog.cc" "pform_class_type.o" "eval_attrib.o" "config.log" "ivl.def" "parse_misc.h" "version_base.h" "load_module.cc" "disciplines.vams" "aclocal.m4" "pform_struct_type.o" "HName.h" "sv_vpi_user.h" "ivl_target.txt" "netvector.o" "check.conf" "net_design.cc" "Attrib.h" "pform_pclass.o" "cadpli/" "swift.txt" "AStatement.h" "verilog.spec" "HName.cc" "constants.vams" "iverilog-vpi.man.in" "PUdp.cc" "configure" "extensions.txt" "glossary.txt" "netmisc.h" "PTask.h" "eval_attrib.cc" "syn-rules.y" "design_dump.cc" "tgt-null/" "tgt-verilog/" "lexor_keyword.gperf" "functor.cc" "elab_type.cc" "net_func.cc" "net_analog.o" "expr_synth.cc" "discipline.o" "PGate.cc" "lpm.txt" "verireal.h" "netparray.o" "synth2.o" "PGate.h" "PGate.o" "tgt-vvp/" "parse_api.h" "veriuser.h" "net_modulo.o" "Statement.h" "lexor_keyword.cc" "vhdlpp/" "stamp-_pli_types-h" "StringHeap.o" "net_func_eval.cc" "tgt-stub/" "netvector.h" "Attrib.cc" "compiler.h" "PSpec.cc" "t-dll.cc" "elaborate_analog.o" "PFunction.o" "net_link.o" "COPYING.lesser" "autoconf.sh" "parse.cc" "sys_funcs.o" "pform_analog.o" "acc_user.h" "pform.h" "libveriuser/" "t-dll.o" "pform_pclass.cc" "pform_string_type.cc" "target.o" "netmisc.o" "parse.o" "PWire.cc" "PUdp.h" "tgt-pcb/" "tgt-vlog95/" "emit.cc" "PSpec.o" "elab_scope.cc" "net_design.o" "t-dll-proc.o" "PGenerate.o" "cygwin.txt" "dup_expr.cc" "link_const.o" "ivl_alloc.h" "elab_sig_analog.cc" "expr_synth.o" "mingw.txt" "elab_net.o" "pform_dump.o" "PPackage.cc" "t-dll.txt" "functor.h" "config.h.in" "net_assign.cc" "discipline.cc" "attributes.txt" "lexor.o" "va_math.txt" "PEvent.cc" "elaborate_analog.cc" "named.h" "netstruct.cc" "ivl" "net_expr.o" "netlist.h" "netdarray.o" "netvector.cc" "PGenerate.h" "netlist.o" "pform_dump.cc" "ivlpp/" "PDelays.o" "../" "./")
+
+ ("/home/brandonw/editors/.emacs.d/" (23289 16335 909359 917000) "initorg.org~" "eshell/" "./" "initorg.el~" ".python-environments/" "init.el" "ac-comphist.dat" "initorg.org" "evil/" "elpa/" "init.el~" "../" "initorg.el" "kkcrc" "ido.last~" "auto-save-list/" "ido.last")
 
  ("/home/brandonw/.emacs.d/eshell/" (23289 14935 786330 24000) "history" "./" "../")
 )

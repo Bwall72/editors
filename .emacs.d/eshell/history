@@ -1,24 +1,128 @@
-git clone https://github.com/emacs-evil/evil.git 
-sudo apt-get install virtualenv
-sudo pip install virtualenv
-cd .emacs.d/
-rm 1
+ghdl -e and_gate_tb
+ghdl -a and_gate_tb.vhdl 
+ghdl -e and_gate_tb
+ghdl -e and_gate_tb
+ghdl -a and_gate_tb.vhdl 
+ghdl -e and_gate_tb
+ghdl -e and_gate_tb
+ghdl -a and_gate_tb.vhdl 
+ghdl -e and_gate_tb
+ghdl -r and_gate_tb --vcd=and_gate.vcd
+gtkwave and_gate.vcd
+ghdl -a and_gate_tb.vhdl 
+ghdl -e and_gate_tb
+ghdl -r and_gate_tb --vcd=and_gate.vcd
+gtkwave and_gate.vcd
+clear
+
+mkdir dff
+cd dff
+ghdl -s dff.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff_tb.vhdl
+ghdl -s dff_tb.vhdl
+ghdl -s dff_tb.vhdl
+ghdl -s dff.vhdl
+ghdl -s dff_tb.vhdl
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -e dff_tb
+ghdl -r dff_tb --vcd=dff.vcd
+gtkwave dff.vcd
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -e dff_tb
+ghdl -r dff_tb --vcd=dff.vcd
+gtkwave dff.vcd
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -e dff_tb
+ghdl -a dff.vhdl dff_tb.vhdl
+gtkwave dff.vcd
+ls
+ghdl -a dff.vhdl dff_tb.vhdl
+ghdl -e dff_tb
+ghdl -r dff_tb --vcd=dff.vcd
+gtkwave dff.vcd
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp test.cl 
+clisp
+clear
+
+gcc -o test.c
+gcc -o test.c
+gcc test.c
+gcc test.c
+./a.out 
+rm a.out 
 gcc test.c
 ./a.out 
 gcc test.c
-gcc test.c
 ./a.out 
 gcc test.c
 ./a.out 
 gcc test.c
 ./a.out 
-gcc test.c
-./a.out 
-gcc test.c
-./a.out 
-gcc test.c
-./a.out 
-gcc test.c
-./a.out 
-gcc test.c
-./a.out 
+rm a.out 
+clear
+
+platformio
+platformio boards
+sudo apt-get install platformio
+pip install platformio
+platformio boards
+platformio
+platformio boards
+platformio boards --installed
+pip install -U platformio
+platformio boards --installed
+whereis platformio
+pip install -U platformio
+platformio
+platformio
+platformio boards --installed
+platformio boards
+python
+platformio boards --installed
+platformio-ide-terminal
+clear
+
+su
+platformio boards
+platformio boards --installed
+platformio
+platformio boards
+platformio boards
+sudo apt-get install clang
+sudo apt-get install cmake
+sudo apt-get install libclang
+sudo apt-get install clang
+sudo apt-get install llvm
+locate clang-c/Index.h
+cd ..
+cd ..
+cd usr/
+cd lib/
+cd llvm-4.0/
+cd lib/
+ls
+cmake -DLIBCLANG_LIBRARY=/usr/lib/llvm-3.5/lib/libclang.so -DLIBCLANG_INCLUDE_DIR=/usr/lib/llvm-3.5/include/ ~/.emacs.d/ /home/sharath/.emacs.d/irony/ /home/sharath/.emacs.d/elpa/irony-20150408.1501/server
+cmake -DLIBCLANG_LIBRARY=/usr/lib/llvm-4.0/lib/libclang.so -DLIBCLANG_INCLUDE_DIR=/usr/lib/llvm-4.0/include/ ~/.emacs.d/ /home/sharath/.emacs.d/irony/ /home/sharath/.emacs.d/elpa/irony-20150408.1501/server
+sudo apt-get install libclang-dev
+exit
+quit
+platformio device list
+man rand

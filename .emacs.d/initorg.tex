@@ -1,0 +1,230 @@
+% Created 2018-05-14 Mon 19:05
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{brandonw}
+\date{\today}
+\title{initorg}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.2.2 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Brandon Waller Emacs Init 
+
+\section{General Emacs Settings}
+\label{sec-1}
+\subsection{Title}
+\label{sec-1-1}
+\begin{verbatim}
+(setq frame-title-format"Emacs")
+\end{verbatim}
+\subsection{Evil Mode}
+\label{sec-1-2}
+Vim keybindings, and editor in emacs
+\href{https://github.com/emacs-evil/evil}{Repo}
+\href{https://www.emacswiki.org/emacs/Evil}{Wiki}
+\begin{verbatim}
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+\end{verbatim}
+
+\subsection{Theme}
+\label{sec-1-3}
+doom-peacock 
+\href{https://github.com/hlissner/emacs-doom-themes}{repo}
+\begin{verbatim}
+(require 'doom-themes)
+(load-theme 'doom-one t)
+
+(doom-themes-visual-bell-config)
+(doom-themes-org-config)
+\end{verbatim}
+
+\subsection{Line Numbers}
+\label{sec-1-4}
+\begin{verbatim}
+(global-nlinum-mode t)
+\end{verbatim}
+\subsection{Interactively Do Things Mode}
+\label{sec-1-5}
+\begin{verbatim}
+(require 'ido)
+(ido-mode t)
+\end{verbatim}
+\subsection{Package Repositories}
+\label{sec-1-6}
+\begin{verbatim}
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+		    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
+\end{verbatim}
+
+\subsection{Electric Pair}
+\label{sec-1-7}
+\begin{verbatim}
+(electric-pair-mode 1)
+\end{verbatim}
+
+\subsection{Menu Settings}
+\label{sec-1-8}
+\begin{verbatim}
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+\end{verbatim}
+\subsection{Highlight Matching Delimiters}
+\label{sec-1-9}
+\begin{verbatim}
+(show-paren-mode)
+(setq show-paren-delay 0)
+\end{verbatim}
+\subsection{Tab Mode}
+\label{sec-1-10}
+
+\begin{verbatim}
+;; attempt to allow emacs tabs to be read in other applciations
+;; may or may not do anything
+(setq indent-tabs-mode nil)
+\end{verbatim}
+
+\subsection{y/n Confirm}
+\label{sec-1-11}
+\begin{verbatim}
+(fset 'yes-or-no-p 'y-or-n-p)
+\end{verbatim}
+\section{Flycheck}
+\label{sec-2}
+On-the-fly syntax checking extension for Emacs
+\href{http://www.flycheck.org/en/latest/}{Link}
+\begin{verbatim}
+(global-flycheck-mode)
+;; disable elisp
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+\end{verbatim}
+Additional Config Requirements
+SH:
+\begin{verbatim}
+sudo pip install virtualenv
+\end{verbatim}
+Emacs:
+\begin{verbatim}
+M-x jedi:install-server
+\end{verbatim}
+\section{Language Specific Settings}
+\label{sec-3}
+\subsection{C/C++}
+\label{sec-3-1}
+\subsubsection{4 spaces for tab}
+\label{sec-3-1-1}
+\begin{verbatim}
+(setq c-basic-offset 4)
+\end{verbatim}
+\subsubsection{Linux Style}
+\label{sec-3-1-2}
+\begin{verbatim}
+(setq c-default-style "linux")
+\end{verbatim}
+
+\subsubsection{Long Name Setting}
+\label{sec-3-1-3}
+\begin{verbatim}
+(defun indent-setting ()
+  (c-set-offset 'arglist-intro '+))
+(add-hook 'java-mode-hook 'indent-setting)
+\end{verbatim}
+\subsection{Python}
+\label{sec-3-2}
+\subsubsection{Jedi Auto Complete}
+\label{sec-3-2-1}
+\href{https://github.com/tkf/emacs-jedi}{Repo}
+\begin{verbatim}
+(use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))
+\end{verbatim}
+\subsubsection{Jedi Documentation Binding C-.}
+\label{sec-3-2-2}
+\begin{verbatim}
+(with-eval-after-load 'python
+  (define-key python-mode-map (kbd "C-.") 'jedi:show-doc))
+\end{verbatim}
+\subsection{Verilog}
+\label{sec-3-3}
+\subsubsection{Disable Verilog minibuffer when rpessing escape.}
+\label{sec-3-3-1}
+Really helpful when using evil
+\href{https://emacs.stackexchange.com/questions/38468/disable-autocompletion-abbreviation-in-verilog-mode?utm_medium\%3Dorganic&utm_source\%3Dgoogle_rich_qa&utm_campaign\%3Dgoogle_rich_qa}{link}
+\begin{verbatim}
+(defun my-verilog-setup ()
+    (clear-abbrev-table verilog-mode-abbrev-table))
+(add-hook 'verilog-mode-hook #'my-verilog-setup)
+\end{verbatim}
+\subsubsection{Disable auto new line}
+\label{sec-3-3-2}
+\href{https://stackoverflow.com/questions/27098826/how-to-disable-auto-new-line-in-verilog-mode-in-emacs?utm_medium\%3Dorganic&utm_source\%3Dgoogle_rich_qa&utm_campaign\%3Dgoogle_rich_qa}{link}
+\begin{verbatim}
+(setq verilog-auto-newline nil)
+\end{verbatim}
+\subsubsection{Flycheck Verilog (Verilator)}
+\label{sec-3-3-3}
+\begin{verbatim}
+#sudo apt-get install git make autoconf g++ flex bison   # First time prerequisites
+git clone http://git.veripool.org/git/verilator   # Only first time
+
+# Each build:
+unsetenv VERILATOR_ROOT  # For csh; ignore error if on bash
+unset VERILATOR_ROOT  # For bash
+cd verilator
+git pull        # Make sure we're up-to-date
+git tag         # See what versions exist
+#git checkout master      # Use development branch (e.g. recent bug fix)
+#git checkout stable      # Use most recent release
+#git checkout v{version}  # Switch to specified release version
+autoconf        # Create ./configure script
+./configure
+make
+sudo make install
+# Now see "man verilator" or online verilator.pdf's for the example tutorials
+\end{verbatim}
+\section{Org Mode}
+\label{sec-4}
+\subsection{org-bullets mode}
+\label{sec-4-1}
+Proper bullets in org mode
+\begin{verbatim}
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+\end{verbatim}
+% Emacs 25.2.2 (Org mode 8.2.10)
+\end{document}
